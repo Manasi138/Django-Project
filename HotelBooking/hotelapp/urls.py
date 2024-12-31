@@ -10,5 +10,5 @@ urlpatterns = [
     path("show/detail/<int:hotelId>",views.addCategory,name="detail"),
     path("show/clist/<int:hotelId>",views.allCategory,name="clist"),
     path("show/deletecat/<int:Id>",views.deleteCatById,name="deletecat"),
-    path("show/editcat/<int:Id>",views.getCatById,name="deletecat"),
+    path("show/editcat/<int:Id>",views.getCatById,name="editcat"),
 ]

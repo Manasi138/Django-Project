@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('h/', include("hotelapp.urls")),
     path('hh/', include("userapp.urls")),
+    path("hhh/", include("bookingapp.urls")),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  
