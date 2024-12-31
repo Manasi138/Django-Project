@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Hotel Id</td>
+                <td>No Of Rooms</td>
+                <td>Room Type</td>
+                <td>Price per Rooms</td>
+                <td>Availabel Rooms</td>
+                <td colspan="2">action</td> 
+            </tr>
+            {% for i in cat_data %}
+            <tr>
+                <td>{{i.hotel.hotelId}}</td>
+                <td>{{i.room_No}}</td>
+                <td>{{i.roomType}}</td>
+                <td>{{i.price_per_room}}</td>
+                <td>{{i.available_room}}</td>
+                <td><a href="deletecat/{{i.Id}}">delete</a></td>
+                <td><a href="editcat/{{i.Id}}">edit</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+         Form
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            CustomerName : <input type="text" name="C_name"><br>
+            CustomerPassword: <input type="text" name="C_password"><br>
+            Address : <input type="text" name="address"><br>
+            Aadhar No : <input type="text" name="aadhar_no"><br>
+            Contact No : <input type="text" name="contact"><br>
+           
+            <input type="submit" value="addcustomer"><br>
+        </form>
+    </body>
+</html>        

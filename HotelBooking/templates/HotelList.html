@@ -1,0 +1,39 @@
+<html>
+    {% load static %}
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <table border="1">
+            <caption>Hotel</caption>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Location</td>
+                <td>Type</td>
+                <td>Address</td>
+                <td>Rating</td>
+                <td>Contact_no</td>
+                <td>Image</td>
+                <td colspan="2">action<td>
+            </tr>
+            {% for hotel in hotels %}
+            <tr>
+                <td>{{hotel.hotelId}}</td>
+                <td>{{hotel.hotelName}}</td>
+                <td>{{hotel.location}}</td>
+                <td>{{hotel.hoteltype}}</td>
+                <td>{{hotel.address}}</td>
+                <td>{{hotel.rating}}</td>
+                <td>{{hotel.contact}}</td>
+                <td><img src="/{{hotel.hotel_image}}" height="100" width="100"></td>
+                <td><a href="detail/{{hotel.hotelId}}">Add Category</a></td>
+                <td><a href="edit/{{hotel.hotelId}}">edit</a></td>
+                <td><a href="delete/{{hotel.hotelId}}">delete</a></td>
+                <td><a href="clist/{{hotel.hotelId}}">details</a></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+         Form
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            HotelName : <input type="text" name="hotelName"><br>
+            Location : <input type="text" name="location"><br>
+            HotelType : <input type="text" name="hoteltype"><br>
+            Address : <input type="text" name="address"><br>
+            Rating : <input type="text" name="rating"><br>
+            Contact No : <input type="text" name="contact"><br>
+            HotelImage : <input type="file" name="hotel_image"><br>
+            <input type="submit" value="addhotels"><br>
+        </form>
+    </body>
+</html>        

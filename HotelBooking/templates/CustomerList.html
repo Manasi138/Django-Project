@@ -1,0 +1,33 @@
+<html>
+    {% load static %}
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <table border="1">
+            <caption>Customer</caption>
+            <tr>
+                <td>Email ID</td>
+                <td>Name</td>
+                <td>Password</td>
+                <td>Address</td>
+                <td>Address</td>
+                <td>Contact_no</td>
+                <td colspan="2">action<td>
+            </tr>
+            {% for customer in customers %}
+            <tr>
+                <td>{{customer.emailId}}
+                <td>{{customer.C_name}}</td>
+                <td>{{customer.C_password}}</td>
+                <td>{{customer.address}}</td>
+                <td>{{customer.aadhar_no}}</td>
+                <td>{{customer.contact}}</td>
+                <td><a href="edit/{{customer.emailId}}">edit</a></td>
+                <td><a href="delete/{{customer.emailId}}">delete</a></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </body>
+</html>

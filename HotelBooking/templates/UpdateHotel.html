@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+         Form
+        <form action="{% url 'update' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            HotelId : <input type="text" name="hotelId" value="{{hotel.hotelId}}" required><br>
+            HotelName : <input type="text" name="hotelName" value="{{hotel.hotelName}}" required><br>
+            Location : <input type="text" name="location" value="{{hotel.location}}" required><br>
+            HotelType : <input type="text" name="hoteltype" value="{{hotel.hoteltype}}"required><br>
+            Address : <input type="text" name="address" value="{{hotel.address}}" required><br>
+            Rating : <input type="text" name="rating" value="{{hotel.rating}}" required><br>
+            Contact No : <input type="text" name="contact" value="{{hotel.contact}}" required><br>
+            HotelImage : <input type="file" name="hotel_image" required><br>
+            <input type="submit" value="updatehotels"><br>
+        </form>
+    </body>
+</html>        
